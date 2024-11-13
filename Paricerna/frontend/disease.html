@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Information Form</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:  #e68a00;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color:  #e68a00;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color:  #e68a00;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-note {
+            font-size: 14px;
+            color: #555;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Disease Information Form</h2>
+    <form id="diseaseForm" action="index.html" method="post">
+        <!-- Personal Information -->
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Disease Selection -->
+        <div class="form-group">
+            <label for="disease">Type of Disease:</label>
+            <select id="disease" name="disease" required>
+                <option value="">Select Disease</option>
+                <option value="fever">Fever</option>
+                <option value="diabetes">Diabetes</option>
+                <option value="heart_disease">Heart Disease</option>
+                <option value="asthma">Asthma</option>
+                <option value="skin_infection">Skin Infection</option>
+                <option value="other">Other</option>
+            </select>
+            <p class="form-note">If your disease is not listed, choose "Other" and provide details below.</p>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="form-group">
+            <label for="additional-info">Additional Information:</label>
+            <textarea id="additional-info" name="additional-info" placeholder="Describe your symptoms or any additional details"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById("diseaseForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default submission
+        alert("Your information has been submitted successfully! You will receive a mail in a couple of hours from our experts.");
+        window.location.href = "index.html"; // Redirect to index.html
+    });
+</script>
+
+</body>
+</html>

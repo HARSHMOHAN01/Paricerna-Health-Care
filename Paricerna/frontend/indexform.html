@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #F39C12;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #e68a00;
+        }
+
+        .signin-btn {
+            background-color: #3f51b5;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .signin-btn:hover {
+            background-color: #2d3c91;
+        }
+
+        /* Ensure content doesn't overlap with navbar */
+        body > div {
+            margin-top: 70px;
+        }
+
+        /* Registration form styles */
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 50px auto;
+        }
+
+        .form-container h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #F39C12;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #e68a00;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="navbar">
+        <div class="logo">Paricarena</div>
+        <nav>
+            <a href="index.html" id="home-btn">होम</a>
+            <a href="medicines.html" id="medicine-btn">दवाइयां ऑर्डर करें</a>
+            <a href="doctor.html" id="doctors-btn">डॉक्टर्स</a>
+            <a href="hospital.html" id="Emergency-btn">आपातकाल</a>
+        </nav>
+        <a href="indexform.html" class="signin-btn" id="signin-link">दाखिल</a>
+    </header>
+
+    <!-- Registration Form -->
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form id ="registrationForm" action="index.html" method="post">
+
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+        <script>
+            document.getElementById("registrationForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+                const formData = new FormData(this);
+        
+                // Display form data in console
+                console.log("Form Data:");
+                for (const [key, value] of formData.entries()) {
+                    console.log(`${key}: ${value}`);
+                }
+        
+                alert("Registration successful!");
+                window.location.href = "index.html";
+            });
+        </script>
+    </div>
+</body>
+</html>

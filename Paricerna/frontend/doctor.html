@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctors Directory</title>
+  <link rel="stylesheet" href="doctor.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Doctors Directory</div>
+    <nav class="nav-links">
+      <input type="text" id="search-box" placeholder="Search for doctors..." oninput="filterDoctors()">
+    </nav>
+  </header>
+
+  <main>
+    <section id="doctors-list">
+      <h2>Available Doctors Paricarena</h2>
+      <ul id="doctors">
+        <li data-name="Dr. John Smith, Cardiologist, 8172636632">Dr. John Smith (Cardiologist) - 8172636632</li>
+        <li data-name="Dr. Anita Sharma, Dermatologist, 9172636633">Dr. Anita Sharma (Dermatologist) - 9172636633</li>
+        <li data-name="Dr. Rajesh Kumar, Orthopedic Surgeon, 7272636634">Dr. Rajesh Kumar (Orthopedic Surgeon) - 7272636634</li>
+        <li data-name="Dr. Fatima Noor, Pediatrician, 8372636635">Dr. Fatima Noor (Pediatrician) - 8372636635</li>
+        <li data-name="Dr. Michael Brown, Neurologist, 9472636636">Dr. Michael Brown (Neurologist) - 9472636636</li>
+        <li data-name="Dr. Sarah Jones, Psychiatrist, 8572636637">Dr. Sarah Jones (Psychiatrist) - 8572636637</li>
+        <li data-name="Dr. Kavita Gupta, General Practitioner, 9672636638">Dr. Kavita Gupta (General Practitioner) - 9672636638</li>
+        <li data-name="Dr. Prakash Patel, Gastroenterologist, 7772636639">Dr. Prakash Patel (Gastroenterologist) - 7772636639</li>
+        <li data-name="Dr. Emily Clark, Endocrinologist, 8872636640">Dr. Emily Clark (Endocrinologist) - 8872636640</li>
+        <li data-name="Dr. Vikram Bhat, ENT Specialist, 9972636641">Dr. Vikram Bhat (ENT Specialist) - 9972636641</li>
+        <li data-name="Dr. Sneha Reddy, Ophthalmologist, 1082636642">Dr. Sneha Reddy (Ophthalmologist) - 1082636642</li>
+        <li data-name="Dr. Joseph Thomas, Pulmonologist, 1182636643">Dr. Joseph Thomas (Pulmonologist) - 1182636643</li>
+        <li data-name="Dr. Meera Iyer, Oncologist, 1282636644">Dr. Meera Iyer (Oncologist) - 1282636644</li>
+        <li data-name="Dr. Alok Das, Urologist, 1382636645">Dr. Alok Das (Urologist) - 1382636645</li>
+        <li data-name="Dr. Lily Watson, Nephrologist, 1482636646">Dr. Lily Watson (Nephrologist) - 1482636646</li>
+        <li data-name="Dr. Suresh Nair, Cardiothoracic Surgeon, 1582636647">Dr. Suresh Nair (Cardiothoracic Surgeon) - 1582636647</li>
+        <li data-name="Dr. Anjali Mehta, Gynecologist, 1682636648">Dr. Anjali Mehta (Gynecologist) - 1682636648</li>
+        <li data-name="Dr. William Carter, Hematologist, 1782636649">Dr. William Carter (Hematologist) - 1782636649</li>
+        <li data-name="Dr. Priya Verma, Rheumatologist, 1882636650">Dr. Priya Verma (Rheumatologist) - 1882636650</li>
+        <li data-name="Dr. Arjun Singh, Plastic Surgeon, 1982636651">Dr. Arjun Singh (Plastic Surgeon) - 1982636651</li>
+        <li data-name="Dr. Rebecca White, Cosmetic Surgeon, 2082636652">Dr. Rebecca White (Cosmetic Surgeon) - 2082636652</li>
+        <li data-name="Dr. Deepak Kulkarni, Pediatric Surgeon, 2182636653">Dr. Deepak Kulkarni (Pediatric Surgeon) - 2182636653</li>
+        <li data-name="Dr. Olivia Taylor, Geneticist, 2282636654">Dr. Olivia Taylor (Geneticist) - 2282636654</li>
+        <li data-name="Dr. Rohan Kapoor, Sports Medicine Specialist, 2382636655">Dr. Rohan Kapoor (Sports Medicine Specialist) - 2382636655</li>
+        <li data-name="Dr. Susan Foster, Allergist, 2482636656">Dr. Susan Foster (Allergist) - 2482636656</li>
+        <li data-name="Dr. Nisha Goyal, Immunologist, 2582636657">Dr. Nisha Goyal (Immunologist) - 2582636657</li>
+        <li data-name="Dr. Mohit Agarwal, Critical Care Specialist, 2682636658">Dr. Mohit Agarwal (Critical Care Specialist) - 2682636658</li>
+        <li data-name="Dr. Clara Wilson, Pathologist, 2782636659">Dr. Clara Wilson (Pathologist) - 2782636659</li>
+        <li data-name="Dr. Ajay Malhotra, Radiologist, 2882636660">Dr. Ajay Malhotra (Radiologist) - 2882636660</li>
+        <li data-name="Dr. Rachel Morgan, Anesthesiologist, 2982636661">Dr. Rachel Morgan (Anesthesiologist) - 2982636661</li>
+        <li data-name="Dr. Ravi Chatterjee, General Surgeon, 3082636662">Dr. Ravi Chatterjee (General Surgeon) - 3082636662</li>
+        <li data-name="Dr. Snehal Banerjee, Orthodontist, 3182636663">Dr. Snehal Banerjee (Orthodontist) - 3182636663</li>
+        <li data-name="Dr. Edward Harris, Prosthodontist, 3282636664">Dr. Edward Harris (Prosthodontist) - 3282636664</li>
+        <li data-name="Dr. Zoya Khan, Dentist, 3382636665">Dr. Zoya Khan (Dentist) - 3382636665</li>
+        <li data-name="Dr. Aisha Siddiqui, Psychologist, 3482636666">Dr. Aisha Siddiqui (Psychologist) - 3482636666</li>
+        <li data-name="Dr. Vikrant Shah, Chiropractor, 3582636667">Dr. Vikrant Shah (Chiropractor) - 3582636667</li>
+        <li data-name="Dr. Christine Evans, Occupational Therapist, 3682636668">Dr. Christine Evans (Occupational Therapist) - 3682636668</li>
+        <li data-name="Dr. Varun Goel, Physiotherapist, 3782636669">Dr. Varun Goel (Physiotherapist) - 3782636669</li>
+        <li data-name="Dr. Meenal Roy, Podiatrist, 3882636670">Dr. Meenal Roy (Podiatrist) - 3882636670</li>
+        <li data-name="Dr. Peter Adams, Veterinary Specialist, 3982636671">Dr. Peter Adams (Veterinary Specialist) - 3982636671</li>
+        <li data-name="Dr. Kavya Nair, Dietitian, 4082636672">Dr. Kavya Nair (Dietitian) - 4082636672</li>
+        <li data-name="Dr. Arvind Desai, Clinical Pharmacist, 4182636673">Dr. Arvind Desai (Clinical Pharmacist) - 4182636673</li>
+        <li data-name="Dr. Sofia George, Forensic Specialist, 4282636674">Dr. Sofia George (Forensic Specialist) - 4282636674</li>
+        <li data-name="Dr. Nitin Sharma, Biostatistician, 4382636675">Dr. Nitin Sharma (Biostatistician) - 4382636675</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Doctors Directory | Made with ❤️</p>
+  </footer>
+
+  <script src="doctor.js"></script>
+</body>
+</html>
+

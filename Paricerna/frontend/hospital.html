@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nearest Hospitals</title>
+  <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Hospital Finder Paricarena</div>
+  </header>
+
+  <main>
+    <section id="hospital-info">
+      <h2>Nearest Hospitals</h2>
+      <ul id="hospital-list">
+        <li><strong>City Hospital</strong> - Address: 123 Main St, Contact: +123456789</li>
+        <li><strong>Green Valley Medical Center</strong> - Address: 456 Elm St, Contact: +987654321</li>
+        <li><strong>Sunrise Healthcare</strong> - Address: 789 Oak St, Contact: +112233445</li>
+        <li><strong>LifeCare Hospital</strong> - Address: 321 Pine St, Contact: +998877665</li>
+        <li><strong>Global Health Clinic</strong> - Address: 654 Maple St, Contact: +443322110</li>
+      </ul>
+    </section>
+
+    <section id="patient-form">
+      <h2>Patient Registration Form</h2>
+      <form id="registration-form" action="index.html" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required placeholder="Enter your age">
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" required placeholder="Enter your address"></textarea>
+
+        <label for="hospital">Choose a Hospital:</label>
+        <select id="hospital" name="hospital" required>
+          <option value="">Select</option>
+          <option value="city-hospital">City Hospital</option>
+          <option value="green-valley">Green Valley Medical Center</option>
+          <option value="sunrise">Sunrise Healthcare</option>
+          <option value="lifecare">LifeCare Hospital</option>
+          <option value="global-health">Global Health Clinic</option>
+        </select>
+
+        <label for="condition">Describe Your Condition:</label>
+        <textarea id="condition" name="condition" rows="3" placeholder="Enter details about your condition"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Hospital Finder | Made with ❤️</p>
+  </footer>
+
+  <script src="hospital.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #F39C12;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #e68a00;
+        }
+        .form-container p {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+    <form action="indexform.php" method="POST">
+        <label for="First_Name">First Name:</label>
+        <input type="text" id="First_Name" name="First_Name" required><br><br>
+    
+        <label for="Last_Name">Last Name:</label>
+        <input type="text" id="Last_Name" name="Last_Name" required><br><br>
+    
+        <label for="Gender">Gender:</label>
+        <input type="text" id="Gender" name="Gender" required><br><br>
+    
+        <label for="Mobile_Number">Mobile Number:</label>
+        <input type="text" id="Mobile_Number" name="Mobile_Number" required><br><br>
+    
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" required><br><br>
+    
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" name="Password" required><br><br>
+    
+        <button type="submit" name="save">Save</button>
+    </form>
+    
+    <p>By registering, you agree to our terms and conditions.</p>
+</div>
+
+</body>
+</html>
